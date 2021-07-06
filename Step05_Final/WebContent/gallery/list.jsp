@@ -72,6 +72,12 @@
 		text-overflow: ellipsis;
 		overflow: hidden;
 	}
+	
+	.img-wrapper img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;  /* fill | contain | cover | scale-down | none */
+	}
 </style>
 </head>
 <body>
