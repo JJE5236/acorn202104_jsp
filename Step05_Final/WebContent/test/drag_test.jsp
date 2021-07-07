@@ -25,6 +25,8 @@
 			console.log("dragenter!");
 			// drop 이벤트까지 진행될수 있도록 기본 동작을 막는다.
 			e.preventDefault();
+			// 이벤트 전파를 막는다 (불필요하게 부모 요소에 까지 이벤트가 도달하지 않도록)
+			e.stopPropagation();
 		});
 	
 	// dragover 이벤트가 일어 났을때 실행할 함수 등록 
@@ -33,13 +35,15 @@
 		console.log("drageover!");
 		// drop 이벤트까지 진행될수 있도록 기본 동작을 막는다.
 		e.preventDefault();
-		
+		e.stopPropagation();
 	});
 	
 	document.querySelector(".drag-area")
 	.addEventListener("drop", function(e){
 		console.log("drop!");
 		e.preventDefault();
+		e.stopPropagation();
+	
 		//drop 된 파일의 여러가지 정보를 담고 있는 object 
 		const data = e.dataTransfer;
 		//drop 된 파일객체를 저장하고 있는 배열

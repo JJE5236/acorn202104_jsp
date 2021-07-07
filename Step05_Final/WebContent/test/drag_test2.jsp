@@ -25,6 +25,7 @@
 		.addEventListener("dragenter", function(e){
 			// drop 이벤트까지 진행될수 있도록 기본 동작을 막는다.
 			e.preventDefault();
+			e.stopPropagation();
 		});
 	
 	// dragover 이벤트가 일어 났을때 실행할 함수 등록 
@@ -32,12 +33,15 @@
 	.addEventListener("dragover", function(e){
 		// drop 이벤트까지 진행될수 있도록 기본 동작을 막는다.
 		e.preventDefault();
+		e.stopPropagation();
 	});
 	
 	document.querySelector(".drag-area")
 	.addEventListener("drop", function(e){
 		
 		e.preventDefault();
+		e.stopPropagation();
+		
 		//drop 된 파일의 여러가지 정보를 담고 있는 object 
 		const data = e.dataTransfer;
 		//drop 된 파일객체를 저장하고 있는 배열
@@ -74,6 +78,17 @@
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
