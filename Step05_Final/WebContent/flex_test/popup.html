@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup.html</title>
+</head>
+<body>
+    width : <span id="currentItemWidth">auto</span>
+    <input type="range" id="itemWidth" value="50" max="300" min="50">
+    <br>
+    height : <span id="currentItemHeight">auto</span>
+    <input type="range" id="itemHeight" value="50" max="300" min="50">
+    <script>
+	    document.querySelector("#itemWidth").addEventListener("mousemove", function(){
+	       	window.opener.updateItem("width", this.value+"px");
+	        document.querySelector("#currentItemWidth").innerText=this.value+"px";
+	    });
+	    document.querySelector("#itemHeight").addEventListener("mousemove", function(){
+	    	window.opener.updateItem("height", this.value+"px");
+	        document.querySelector("#currentItemHeight").innerText=this.value+"px";
+	    });
+    </script>
+</body>
+</html>
