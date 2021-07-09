@@ -15,7 +15,7 @@
 <jsp:include page="include/navbar.jsp"></jsp:include>
 <div class="container">
 	<h1>인덱스 페이지 입니다.</h1>
-	
+	<script src="https://gist.github.com/oli999/84fac63d9f56cafcb653679b68883e76.js"></script>
 </div>
 <%
 	//쿠키 읽어오기
