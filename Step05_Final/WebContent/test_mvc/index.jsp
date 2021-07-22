@@ -11,7 +11,7 @@
 	<h1>mvc 페턴 (Model2) 테스트 페이지</h1>
 	<ul>
 		<li><a href="fortune">오늘의 운세보기</a></li>
-		<li><a href="member">회원 한명의 정보 보기</a></li>
+		<li><a href="member.do">회원 한명의 정보 보기</a></li>
 	</ul>
 </body>
 </html>

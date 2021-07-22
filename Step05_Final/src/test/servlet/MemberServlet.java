@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import test.member.dto.MemberDto;
 
-@WebServlet("/test_mvc/member")
+@WebServlet("/test_mvc/member.do")
 public class MemberServlet extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
